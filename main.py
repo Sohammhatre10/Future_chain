@@ -42,4 +42,4 @@ while True:
                 # Rollback the changes in case of an error
                 conn.rollback()
                 print(f"Error: {error}")
-    time.sleep(300)
+    time.sleep("adjust according to requirements")
