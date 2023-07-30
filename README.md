@@ -38,4 +38,6 @@ Model Architecture
 Our neural network architecture comprises multiple layers, including LSTM and Dense layers, meticulously designed to extract essential features from the input data and predict future prices with incredible precision.
 
 Performance
-Get ahead in the crypto world with Predicto Unleash the power of neural networks to make smarter decisions and maximize your returns. Let the app handle the complexities while you focus on unlocking the future of cryptocurrency. Happy trading!![image](https://github.com/Sohammhatre10/Predicto/assets/106436641/68b4a0fc-5ff3-4766-b074-e7e4de58eca9)
+Get ahead in the crypto world with Predicto Unleash the power of neural networks to make smarter decisions and maximize your returns. Let the app handle the complexities while you focus on unlocking the future of cryptocurrency. Happy trading!!
+
+[image](https://github.com/Sohammhatre10/Predicto/assets/106436641/68b4a0fc-5ff3-4766-b074-e7e4de58eca9)
