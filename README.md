@@ -1,5 +1,5 @@
 # Predicto
-Predicto - Neural Networks at 96% Efficiency
+Predicto - Crypto-Predictor
 Predicto
 
 ![WhatsApp Image 2023-07-30 at 16 33 24](https://github.com/Sohammhatre10/Predicto/assets/106436641/6bf4c83e-2cdf-4bf9-8dae-6b326a30f2a7)
@@ -39,5 +39,3 @@ Our neural network architecture comprises multiple layers, including LSTM and De
 
 Performance
 Get ahead in the crypto world with Predicto Unleash the power of neural networks to make smarter decisions and maximize your returns. Let the app handle the complexities while you focus on unlocking the future of cryptocurrency. Happy trading!!
-
-[image](https://github.com/Sohammhatre10/Predicto/assets/106436641/68b4a0fc-5ff3-4766-b074-e7e4de58eca9)
