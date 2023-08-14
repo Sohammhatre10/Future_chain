@@ -81,7 +81,7 @@ def pred(ticker_symbol):
             collection_2 = db[f"{ticker_symbol}-PRED"]
             data_dict = {
                 "Date": coin_data["Date"].iloc[0],
-                "Close": coin_data["Close"].iloc[0]
+                "Close": coin_data["Close"]
             }
             inserted_record = collection_2.insert_one(data_dict)  # Use insert_one for a single document
             print("Inserted ID:", inserted_record.inserted_id)
@@ -94,7 +94,7 @@ def pred(ticker_symbol):
 def delete_data(ticker_symbol):
     client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@cluster0.ziyiwtr.mongodb.net/")
     db = client["Crypto_data"]
-    collection = db[f"{ticker_symbol}"]
+    collection = db[f"{ticker_symbol}-PRED"]
     last_inserted_document = collection.find_one(sort=[("_id", pymongo.DESCENDING)])
 
     if last_inserted_document:
