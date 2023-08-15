@@ -6,6 +6,7 @@ import time
 from pymongo import MongoClient
 import csv
 from key import username, password
+import matplotlib.pyplot as plt
 
 import shutil
 
@@ -56,41 +57,36 @@ def pred(ticker_symbol):
     today = datetime.now().date()
     coin_data = yf.download(f"{ticker_symbol}-INR", period='1d')
     selected_value = 0
+    coin_data_1 = pd.read_csv(csv_file_path)
+    coin_data["Date"] = datetime.now().date()
+    # print(coin_data)
+    original_date = coin_data["Date"].iloc[0]  # Get the first date value as a single datetime object
 
-    if not coin_data.empty:
-        coin_data_1 = pd.read_csv(csv_file_path)
-        coin_data["Date"] = datetime.now().date()
+    new_d = original_date + timedelta(days=1)
+    new_date = new_d.strftime("%Y-%m-%d")
+    #     if ticker_symbol in coin_data_1.columns:
+    selected_value = coin_data_1.loc[coin_data_1['Date'] == new_date, ticker_symbol].values
+    #     else:
+    #         print("BTC column not found in the DataFrame.")
+    coin_update = pd.DataFrame(coin_data)
+    coin_update["Close"] = float(coin_data["Close"].iloc[0]) * selected_value
+    print(coin_update["Close"].iloc[0])
 
-        original_date = coin_data["Date"].iloc[0]  # Get the first date value as a single datetime object
-
-        new_date = original_date + timedelta(days=1)
-        if ticker_symbol in coin_data.columns:
-            selected_value = coin_data.loc[coin_data["Date"] == new_date, f"{ticker_symbol}"]
-            selected_value = selected_value.astype(float)
-        else:
-            print("BTC column not found in the DataFrame.")
-
-        coin_data["Date"] = new_date.strftime("%Y-%m-%d")
-
-        if new_date.strftime("%Y-%m-%d") in coin_data_1["Date"].values:
-            coin_data["Close"] = (coin_data["Close"].iloc[0]).astype(float)
-            coin_data["Close"] = float(coin_data["Close"].iloc[0]) * (selected_value)
-
-            client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@cluster0.ziyiwtr.mongodb.net/")
-            db = client["Crypto_data"]
-            collection_2 = db[f"{ticker_symbol}-PRED"]
-            data_dict = {
-                "Date": coin_data["Date"].iloc[0],
-                "Close": coin_data["Close"]
-            }
-            inserted_record = collection_2.insert_one(data_dict)  # Use insert_one for a single document
-            print("Inserted ID:", inserted_record.inserted_id)
-        else:
-            print(f"No data available for {new_date} in the CSV file.")
-    else:
-        print(f"No data available for {ticker_symbol} on {today}.")
-
-
+    client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@cluster0.ziyiwtr.mongodb.net/")
+    db = client["Crypto_data"]
+    collection_2 = db[f"{ticker_symbol}-PRED-1"]
+    data_dict = {
+        "Date": new_d.strftime("%Y-%m-%d"),
+        "Close": coin_update["Close"].iloc[0]
+    }
+    inserted_record = collection_2.insert_one(data_dict)  # Use insert_one for a single document
+    print("Inserted ID:", inserted_record.inserted_id)
+    coin_data_graph = pd.Dataframe([coin_data['Date'], coin_data['Close'])
+    coin_data_graph.append(data_dict)
+    k = list(range(len(coin_data_graph))
+    plt.plot(k,coin_data_graph.Close,color="red")
+    plt.show()
+    plt.title(f"{ticker_symbol} with respect to time")
 def delete_data(ticker_symbol):
     client = pymongo.MongoClient(f"mongodb+srv://{username}:{password}@cluster0.ziyiwtr.mongodb.net/")
     db = client["Crypto_data"]
