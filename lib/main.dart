@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:predicto/screen_1.dart';
 import 'package:predicto/screen_2.dart';
+import 'package:predicto/screen_3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Screen_1(),
+      home: Screen_3(),
     );
   }
 }
