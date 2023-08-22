@@ -2,7 +2,8 @@
 Predicto - Crypto-Predictor
 Predicto
 
-![WhatsApp Image 2023-07-30 at 16 33 24](https://github.com/Sohammhatre10/Predicto/assets/106436641/6bf4c83e-2cdf-4bf9-8dae-6b326a30f2a7)
+<img width="943" alt="image" src="https://github.com/Sohammhatre10/Predicto/assets/106436641/a3b561ea-e686-4942-9c29-2eb8bb257ad0">
+
 
 **Table of Contents**
 1) Introduction
