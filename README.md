@@ -4,6 +4,15 @@ Predicto
 
 ![WhatsApp Image 2023-07-30 at 16 33 24](https://github.com/Sohammhatre10/Predicto/assets/106436641/6bf4c83e-2cdf-4bf9-8dae-6b326a30f2a7)
 
+<img width="949" alt="image" src="https://github.com/Sohammhatre10/Predicto/assets/106436641/62fb7490-913c-4e29-bc4e-ffc61cab305f">
+
+<img width="945" alt="image" src="https://github.com/Sohammhatre10/Predicto/assets/106436641/c80321a8-1161-4895-be14-ca87598ec2f2">
+
+<img width="949" alt="image" src="https://github.com/Sohammhatre10/Predicto/assets/106436641/c80f7ce3-1927-499b-bd0c-c40750b1d6e3">
+
+
+
+
 **Table of Contents**
 1) Introduction
 2) Features
