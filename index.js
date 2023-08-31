@@ -4,8 +4,11 @@ const cors = require('cors')
 const app = express();
 const port = 3000;
 app.use(cors())
+
+const url = "mongodb+srv://sohammhatre420:zvJv5wI7C6YRX0Qb@cluster0.ziyiwtr.mongodb.net/Crypto_data?retryWrites=true&w=majority";
+
 // MongoDB Atlas connection details
-const atlas_connection_string = "mongodb+srv://sohammhatre420:zvJv5wI7C6YRX0Qb@cluster0.ziyiwtr.mongodb.net/Crypto_data?retryWrites=true&w=majority";
+const atlas_connection_string = url;
 
 //BTC
 
