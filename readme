@@ -1,0 +1,7 @@
+for backend ->
+1. downloading node_modules npm i -f
+2. in backend 1. npm i express
+              2. npm i cors
+              3. npm i mongoose
+              4. npm i nodemon
+for start ---- server npm run start;
