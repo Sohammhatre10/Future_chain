@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Crypto Dashboard</h1>
+        <p>Track the latest cryptocurrency prices and trends in real time.</p>
+    </header>
+
+    <section id="cryptocurrencies">
+        <h2>Top Cryptocurrencies</h2>
+
+        <!-- Bitcoin Widget -->
+        <div class="crypto-widget" id="bitcoin">
+            <h3>Bitcoin (BTC)</h3>
+            <canvas id="btcChart" width="400" height="200"></canvas>
+            <p>Current Price: <span id="btc-price">Loading...</span></p>
+        </div>
+
+        <!-- Ethereum Widget -->
+        <div class="crypto-widget" id="ethereum">
+            <h3>Ethereum (ETH)</h3>
+            <canvas id="ethChart" width="400" height="200"></canvas>
+            <p>Current Price: <span id="eth-price">Loading...</span></p>
+        </div>
+
+        <!-- Dogecoin Widget -->
+        <div class="crypto-widget" id="dogecoin">
+            <h3>Dogecoin (DOGE)</h3>
+            <canvas id="dogeChart" width="400" height="200"></canvas>
+            <p>Current Price: <span id="doge-price">Loading...</span></p>
+        </div>
+
+        <!-- Litecoin Widget -->
+        <div class="crypto-widget" id="litecoin">
+            <h3>Litecoin (LTC)</h3>
+            <canvas id="ltcChart" width="400" height="200"></canvas>
+            <p>Current Price: <span id="ltc-price">Loading...</span></p>
+        </div>
+
+        <!-- XRP Widget -->
+        <div class="crypto-widget" id="xrp">
+            <h3>XRP</h3>
+            <canvas id="xrpChart" width="400" height="200"></canvas>
+            <p>Current Price: <span id="xrp-price">Loading...</span></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Crypto Dashboard</p>
+    </footer>
+</body>
+
+</html>
