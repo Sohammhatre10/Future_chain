@@ -1,0 +1,126 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and Basic Layout */
+body {
+    background-color: #141416;
+    color: #e6e8ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e1f22;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #b0b3b8;
+}
+
+/* Section Title */
+h2 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Crypto Widgets Layout */
+#cryptocurrencies {
+    display: grid;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Crypto Widget Styling */
+.crypto-widget {
+    background-color: #1e1f22;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crypto-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.crypto-widget h3 {
+    font-size: 1.5em;
+    color: #e6e8ec;
+    margin-bottom: 10px;
+}
+
+.crypto-widget p {
+    font-size: 1.2em;
+    color: #b0b3b8;
+    margin-top: 10px;
+}
+
+.crypto-widget span {
+    font-weight: bold;
+    color: #4ed1a1;
+}
+
+/* Chart Styling */
+#cryptocurrencies canvas {
+    margin-top: 15px;
+    border: 1px solid #4ed1a1;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+    background-color: #1e1f22;
+    text-align: center;
+    color: #b0b3b8;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .crypto-widget {
+        padding: 15px;
+    }
+}
